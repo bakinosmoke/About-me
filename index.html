@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BAKi Official - Software Developer, Reverse Engineer, and Tech Enthusiast">
+  <meta name="keywords" content="BAKi, developer, ethical hacking, reverse engineering, web designer">
+  <meta name="author" content="BAKi">
+  <meta name="theme-color" content="#3498db">
+  <meta property="og:title" content="BAKi Official">
+  <meta property="og:description" content="Software Developer, Reverse Engineer, and Tech Enthusiast">
+  <meta property="og:image" content="baki.png">
+  <meta property="og:url" content="https://about-me-lemon-omega.vercel.app/">
+  <meta property="og:type" content="website">
+  <link rel="shortcut icon" href="baki.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>BAKi Official - Personal Website</title>
+</head>
+<body>
+
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="galau.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="soundToggle" class="sound-toggle" aria-label="Toggle Sound">
+    <i class="fas fa-volume-mute"></i>
+  </button>
+
+  <header id="header">
+    <a href="#" class="logo">BAKi Official</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="primary-navigation">
+      <a href="#" class="active">Home</a>
+      <a href="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M" target="_blank" rel="noopener noreferrer">My Playlist</a>
+      <a href="https://t.me/Dark_is_the_nigth" target="_blank" rel="noopener noreferrer">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <div class="home-container">
+      <div class="profile-section">
+
+        <div class="home-img" id="tiltImg">
+          <img src="baki.png" alt="BAKi" loading="lazy">
+        </div>
+
+        <div class="home-content">
+          <h1>Hi, I'm <span class="highlight">BAKi</span></h1>
+          <div class="typing-container">
+            <h2>I'm a <span class="typing" id="typingTarget"></span></h2>
+          </div>
+          <p class="bio">
+            I am an ordinary person who likes things related to technology and happens to be lucky
+            to have a little experience about technology and others. Even though I only learned
+            using autodidactic methods because of a reason that required me to do so :)
+          </p>
+
+          <div class="social-icons">
+            <a href="https://www.wh00.ooo/users/lethergo_0" target="_blank" rel="noopener noreferrer" aria-label="Whoo">
+              <i class="fas fa-link"></i>
+            </a>
+            <a href="https://github.com/bakinosmoke" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.tiktok.com/@jennzxy05" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://t.me/Dark_is_the_nigth" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+              <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1EWE7cz7sE/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+
+          <a href="assets/index.html" class="btn" target="_blank" rel="noopener noreferrer">See More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div id="particles-js"></div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "BAKi",
+    "url": "https://about-me-lemon-omega.vercel.app/",
+    "sameAs": [
+      "https://github.com/bakinosmoke",
+      "https://t.me/Dark_is_the_nigth",
+      "https://www.tiktok.com/@jennzxy05",
+      "https://www.facebook.com/share/1EWE7cz7sE/"
+    ],
+    "jobTitle": "Software Developer",
+    "description": "Software Developer, Reverse Engineer, and Tech Enthusiast"
+  }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+  </script>
+
+</body>
+</html>
